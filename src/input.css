@@ -7,7 +7,7 @@
 :root {
   /* ### Primary */
 
-  --Moderate-cyan: hsl(176, 50%, 47%);
+  --Moderate-cyan: #3cb4ac;
   --Dark-cyan: hsl(176, 72%, 28%);
 
   /* ### Neutral */
