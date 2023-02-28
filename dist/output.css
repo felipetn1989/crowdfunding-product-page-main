@@ -553,6 +553,10 @@ video {
   top: 9rem;
 }
 
+.top-\[7\.5rem\] {
+  top: 7.5rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -942,6 +946,10 @@ video {
   font-weight: 700;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
 .leading-6 {
   line-height: 1.5rem;
 }
@@ -964,6 +972,10 @@ video {
 
 .leading-\[1\.4375rem\] {
   line-height: 1.4375rem;
+}
+
+.leading-3 {
+  line-height: .75rem;
 }
 
 .tracking-normal {
