@@ -1235,6 +1235,38 @@ header {
     margin-top: -0.5625rem;
   }
 
+  .lg\:ml-4 {
+    margin-left: 1rem;
+  }
+
+  .lg\:ml-5 {
+    margin-left: 1.25rem;
+  }
+
+  .lg\:ml-8 {
+    margin-left: 2rem;
+  }
+
+  .lg\:ml-9 {
+    margin-left: 2.25rem;
+  }
+
+  .lg\:ml-10 {
+    margin-left: 2.5rem;
+  }
+
+  .lg\:ml-11 {
+    margin-left: 2.75rem;
+  }
+
+  .lg\:ml-12 {
+    margin-left: 3rem;
+  }
+
+  .lg\:ml-14 {
+    margin-left: 3.5rem;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -1428,6 +1460,10 @@ header {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
   .lg\:items-center {
     align-items: center;
   }
@@ -1480,10 +1516,22 @@ header {
     gap: 1.25rem;
   }
 
+  .lg\:gap-4 {
+    gap: 1rem;
+  }
+
   .lg\:space-y-\[unset\] > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(unset * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(unset * var(--tw-space-y-reverse));
+  }
+
+  .lg\:place-self-start {
+    place-self: start;
+  }
+
+  .lg\:place-self-end {
+    place-self: end;
   }
 
   .lg\:border-b-0 {
@@ -1588,6 +1636,26 @@ header {
     padding-bottom: 3.25rem;
   }
 
+  .lg\:py-\[2\.125rem\] {
+    padding-top: 2.125rem;
+    padding-bottom: 2.125rem;
+  }
+
+  .lg\:py-\[2\.0625rem\] {
+    padding-top: 2.0625rem;
+    padding-bottom: 2.0625rem;
+  }
+
+  .lg\:py-\[2rem\] {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .lg\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .lg\:pb-11 {
     padding-bottom: 2.75rem;
   }
@@ -1610,6 +1678,10 @@ header {
 
   .lg\:pt-\[3\.5rem\] {
     padding-top: 3.5rem;
+  }
+
+  .lg\:pl-4 {
+    padding-left: 1rem;
   }
 
   .lg\:text-2xl {
@@ -1674,6 +1746,14 @@ header {
     line-height: 1.5rem;
   }
 
+  .lg\:leading-4 {
+    line-height: 1rem;
+  }
+
+  .lg\:leading-5 {
+    line-height: 1.25rem;
+  }
+
   .lg\:tracking-tight {
     letter-spacing: -0.025em;
   }
@@ -1685,5 +1765,9 @@ header {
   .lg\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .lg\:text-\[0\.9375\] {
+    color: 0.9375;
   }
 }
