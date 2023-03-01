@@ -21,11 +21,12 @@
     <header class="flex items-start justify-between h-[18.75rem] px-6 py-8">
       <img src="../images/logo.svg" alt="Crowdfund logo" />
       <img src="../images/icon-hamburger.svg" alt="Menu icon" />
-      <nav class="hidden text-white">
-        <ul>
-          <li>About</li>
-          <li>Discover</li>
-          <li>Get Started</li>
+      <nav class="absolute top-[5.5rem] hidden bg-white text-black font-bold py-6 z-10 w-[20.4375rem] rounded-lg"> 
+        <!-- change hidden to block -->
+        <ul class="space-y-6 text-base tracking-tighter">
+          <li class="px-6 pb-5 border-b">About</li>
+          <li class="px-6 pb-6 border-b">Discover</li>
+          <li class="px-6">Get Started</li>
         </ul>
       </nav>
       <div
@@ -95,11 +96,15 @@
               <span class="text-black font-bold text-lg font-sans">101</span> <span class="text-base">left</span>
             </div>
             <!-- Selected pledge start -->
-            <div class="hidden">
+            <!-- change hidden to flex -->
+            <div class="hidden flex-col gap-4 items-center border-t py-6">
               <h4>Enter your pledge</h4>
-              <div>
-                <button>$25</button>
-                <button>Continue</button>
+              <div class="flex justify-center gap-4">
+                <button class="flex gap-3 border px-[1.8125rem] py-3 rounded-3xl">
+                  <span class="translate-x-[-0.5rem]">$</span>
+                  <span class="translate-x-[-0.625rem] text-black font-bold">25</span>
+                </button>
+                <button class="border border-[#3cb4ac] rounded-3xl bg-[#3cb4ac] text-white font-bold px-6 py-3">Continue</button>
               </div>
             </div>
             <!-- Selected pledge end -->
@@ -121,11 +126,14 @@
               <span class="text-black font-bold text-lg">64</span> <span class="text-base">left</span>
             </div>
             <!-- Selected pledge start -->
-            <div class="hidden">
+            <div class="hidden flex-col gap-4 items-center border-t py-6">
               <h4>Enter your pledge</h4>
-              <div>
-                <button>$75</button>
-                <button>Continue</button>
+              <div class="flex justify-center gap-4">
+                <button class="flex gap-3 border px-[1.8125rem] py-3 rounded-3xl">
+                  <span class="translate-x-[-0.5rem]">$</span>
+                  <span class="translate-x-[-0.625rem] text-black font-bold">75</span>
+                </button>
+                <button class="border border-[#3cb4ac] rounded-3xl bg-[#3cb4ac] text-white font-bold px-6 py-3">Continue</button>
               </div>
             </div>
             <!-- Selected pledge end -->
