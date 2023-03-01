@@ -545,6 +545,34 @@ video {
   top: 7.5rem;
 }
 
+.top-32 {
+  top: 8rem;
+}
+
+.top-4 {
+  top: 1rem;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.right-1 {
+  right: 0.25rem;
+}
+
+.right-\[-1rem\] {
+  right: -1rem;
+}
+
+.right-\[-1\.25rem\] {
+  right: -1.25rem;
+}
+
+.right-\[-1\.125rem\] {
+  right: -1.125rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1099,6 +1127,42 @@ header {
     top: 28.75rem;
   }
 
+  .lg\:top-3 {
+    top: 0.75rem;
+  }
+
+  .lg\:top-36 {
+    top: 9rem;
+  }
+
+  .lg\:top-40 {
+    top: 10rem;
+  }
+
+  .lg\:top-44 {
+    top: 11rem;
+  }
+
+  .lg\:top-\[11\.5rem\] {
+    top: 11.5rem;
+  }
+
+  .lg\:right-\[-1\.125rem\] {
+    right: -1.125rem;
+  }
+
+  .lg\:top-0 {
+    top: 0px;
+  }
+
+  .lg\:top-\[-1rem\] {
+    top: -1rem;
+  }
+
+  .lg\:top-\[-1\.25rem\] {
+    top: -1.25rem;
+  }
+
   .lg\:mb-\[-0\.0625rem\] {
     margin-bottom: -0.0625rem;
   }
@@ -1161,6 +1225,14 @@ header {
 
   .lg\:mt-3 {
     margin-top: 0.75rem;
+  }
+
+  .lg\:mt-\[-0\.25rem\] {
+    margin-top: -0.25rem;
+  }
+
+  .lg\:mt-\[-0\.5625rem\] {
+    margin-top: -0.5625rem;
   }
 
   .lg\:block {
@@ -1305,6 +1377,30 @@ header {
 
   .lg\:w-\[31\.50rem\] {
     width: 31.50rem;
+  }
+
+  .lg\:w-\[35rem\] {
+    width: 35rem;
+  }
+
+  .lg\:w-\[40rem\] {
+    width: 40rem;
+  }
+
+  .lg\:w-\[44rem\] {
+    width: 44rem;
+  }
+
+  .lg\:w-\[45rem\] {
+    width: 45rem;
+  }
+
+  .lg\:w-\[46rem\] {
+    width: 46rem;
+  }
+
+  .lg\:w-\[45\.5rem\] {
+    width: 45.5rem;
   }
 
   .lg\:translate-x-1 {
@@ -1480,6 +1576,16 @@ header {
   .lg\:px-11 {
     padding-left: 2.75rem;
     padding-right: 2.75rem;
+  }
+
+  .lg\:py-14 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .lg\:py-\[3\.25rem\] {
+    padding-top: 3.25rem;
+    padding-bottom: 3.25rem;
   }
 
   .lg\:pb-11 {
