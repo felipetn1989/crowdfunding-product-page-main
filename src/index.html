@@ -48,10 +48,10 @@
         </button>
       </div>
       <div
-        class="grid absolute top-[7.5rem] gap-7 py-8 px-6 bg-white justify-self-center z-10 w-[20.4375rem] text-[0.8125rem] text-[#7a7a7a] rounded-lg"
+        class="hidden absolute top-[7.5rem] gap-7 py-8 px-6 bg-white justify-self-center z-10 w-[20.4375rem] text-[0.8125rem] text-[#7a7a7a] rounded-lg"
       >
         <!-- Selection modal start -->
-
+        <!-- Change hidden to grid -->
         <div class="flex items-center justify-between">
           <h2 class="text-base font-bold tracking-tighter text-black">
             Back this project
@@ -91,8 +91,8 @@
               us launch our promotional campaign, and you’ll be added to a
               special Backer member list.
             </p>
-            <div>
-              <span class="text-black font-bold text-lg font-sans">101</span> <span>left</span>
+            <div class="flex items-center gap-1">
+              <span class="text-black font-bold text-lg font-sans">101</span> <span class="text-base">left</span>
             </div>
             <!-- Selected pledge start -->
             <div class="hidden">
@@ -117,8 +117,8 @@
               thank you. You’ll be added to our Backer member list. Shipping is
               included.
             </p>
-            <div>
-              <span class="text-black font-bold text-lg">64</span> <span>left</span>
+            <div class="flex items-center gap-1">
+              <span class="text-black font-bold text-lg">64</span> <span class="text-base">left</span>
             </div>
             <!-- Selected pledge start -->
             <div class="hidden">
@@ -130,7 +130,7 @@
             </div>
             <!-- Selected pledge end -->
           </div>
-          <div class="border px-6 py-8 grid gap-9 leading-[1.4375rem]">
+          <div class="border px-6 py-6 grid gap-6 leading-[1.4375rem]">
             <div class="flex gap-4">
               <input class="w-6" type="radio" name="pledge" id="pledge_200" />
               <label class="flex flex-col gap-1 text-[0.6875rem]" for="pledge_200">
@@ -143,7 +143,9 @@
               a personal thank you. You’ll be added to our Backer member list.
               Shipping is included.
             </p>
-            <div><span>0</span> <span>left</span></div>
+            <div class="flex items-center gap-2">
+              <span class="text-black font-bold text-lg font-sans">0</span> <span class="text-base">left</span>
+            </div>
             <!-- Selection modal end -->
           </div>
         </form>
