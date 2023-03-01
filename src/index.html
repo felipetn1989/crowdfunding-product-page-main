@@ -18,15 +18,15 @@
   </head>
 
   <body>
-    <header class="flex items-start justify-between h-[18.75rem] px-6 py-8">
+    <header class="flex items-start justify-between h-[18.75rem] px-6 py-8 lg:py-[3rem] lg:px-[10.3125rem] lg:h-[25rem]">
       <img src="../images/logo.svg" alt="Crowdfund logo" />
-      <img src="../images/icon-hamburger.svg" alt="Menu icon" />
-      <nav class="absolute hidden top-[5.5rem] left-2/4 translate-x-[-50%] bg-white text-black font-bold py-6 z-10 w-[20.5rem] rounded-lg"> 
+      <img class="lg:hidden" src="../images/icon-hamburger.svg" alt="Menu icon" />
+      <nav class="absolute hidden top-[5.5rem] left-2/4 translate-x-[-50%] bg-white text-black font-bold py-6 z-10 w-[20.5rem] rounded-lg lg:block lg:bg-[unset] lg:top-[unset]  lg:left-0 lg:relative lg:text-white lg:py-0 lg:translate-x-[6.5rem]"> 
         <!-- change hidden to block -->
-        <ul class="space-y-6 text-base tracking-tighter">
-          <li class="px-6 pb-5 border-b">About</li>
-          <li class="px-6 pb-6 border-b">Discover</li>
-          <li class="px-6">Get Started</li>
+        <ul class="space-y-6 text-base tracking-tighter lg:flex lg:gap-8 lg:space-y-[unset] lg:text-xs lg:font-bold">
+          <li class="px-6 pb-5 border-b lg:border-b-0 lg:px-0">About</li>
+          <li class="px-6 pb-6 border-b lg:border-b-0 lg:px-0">Discover</li>
+          <li class="px-6 lg:px-0">Get Started</li>
         </ul>
       </nav>
       <div

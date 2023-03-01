@@ -21,7 +21,7 @@ body {
 }
 
 header {
-    background: url('../images/image-hero-desktop.jpg') no-repeat center center/cover;
+    background: url('../images/image-hero-mobile.jpg') no-repeat center center/cover;
 }
 
 .attribution {
@@ -30,4 +30,10 @@ header {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width:60em) {
+  header {
+    background-image: url(../images/image-hero-desktop.jpg);
+  }
 }
