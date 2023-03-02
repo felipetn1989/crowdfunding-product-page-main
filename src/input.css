@@ -36,4 +36,23 @@ header {
   header {
     background-image: url(../images/image-hero-desktop.jpg);
   }
+
+  .grid_bloc1:nth-child(1),.grid_bloc2:nth-child(1),.grid_bloc3:nth-child(1) {
+    grid-area: one;
+  }
+
+  .grid_bloc1:nth-child(2),.grid_bloc2:nth-child(2),.grid_bloc3:nth-child(2) {
+    grid-area: two;
+  }
+
+  .grid_bloc1:nth-child(3),.grid_bloc2:nth-child(3),.grid_bloc3:nth-child(3) {
+    grid-area: three;
+  }
+
+  .pledge_bloc {
+    display: grid;
+    grid-template-areas: 
+    'one three'
+    'two two';
+  }
 }
