@@ -12,6 +12,10 @@
   .unavailable_button {
     @apply bg-[#7a7a7a] font-bold rounded-3xl text-white tracking-tighter py-3 px-9 mt-8 lg:mt-0 hover:cursor-default;
   }
+
+  .disabled {
+    @apply grayscale opacity-50
+  }
 }
 
 :root {

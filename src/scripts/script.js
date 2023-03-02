@@ -14,7 +14,8 @@ mobileMenuIcon.addEventListener("click", () => {
 
 let bookmark = false;
 
-bookmarkIcon.addEventListener("click", () => {
+bookmarkIcon.addEventListener("click", (event) => {
+  event.preventDefault()
   bookmarkIcon.src = bookmark
     ? "../images/icon-bookmark.svg"
     : "../images/icon-bookmarked.svg";
