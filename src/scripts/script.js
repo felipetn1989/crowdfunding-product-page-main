@@ -1,3 +1,5 @@
+pledge_no_reward.checked = true
+
 mobileMenuIcon.addEventListener("click", () => {
   const check = menu.classList.contains("hidden");
 
@@ -20,24 +22,30 @@ bookmarkIcon.addEventListener("click", (event) => {
     ? "../images/icon-bookmark.svg"
     : "../images/icon-bookmarked.svg";
   bookmarkText.innerHTML = bookmark ? "Bookmark" : "Bookmarked";
-  bookmarkIcon.style.transform = bookmark
+  bookmarkText.style.transform = bookmark
     ? "translateX(0)"
-    : "translateX(-1rem)";
+    : "translateX(1rem)";
   bookmarkText.style.color = bookmark ? "" : "#147b74";
   bookmark = !bookmark;
 });
 
 backProject.addEventListener("click", openSelectionPage);
 
-closeSelectionIcon.addEventListener("click", openSelectionPage);
+closeSelectionIcon.addEventListener("click", () => openSelectionPage(event,0));
 
 const rewardButtons = document.querySelectorAll(".available_button");
+const radios = document.getElementsByName("pledge")
 
-rewardButtons.forEach((button) => {
-  button.addEventListener("click", openSelectionPage);
+rewardButtons.forEach((button,index) => {
+  button.addEventListener("click",() => openSelectionPage(event,index));
 });
 
-function openSelectionPage() {
+function openSelectionPage(event,index) {
+  if (event.target == backProject) {
+    radios[0].checked = true
+  } else {
+    radios[index+1].check = true
+  }
   selectionPage.classList.toggle("hidden");
   selectionPage.classList.toggle("grid");
   overlay.classList.toggle("hidden");
