@@ -4,6 +4,16 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
 
+@layer components {
+  .available_button {
+    @apply bg-[#3cb4ac] font-bold rounded-3xl text-white tracking-tighter py-3 px-8 mt-8 lg:mt-0 hover:cursor-pointer hover:bg-[#147b74];
+  }
+
+  .unavailable_button {
+    @apply bg-[#7a7a7a] font-bold rounded-3xl text-white tracking-tighter py-3 px-9 mt-8 lg:mt-0 hover:cursor-default;
+  }
+}
+
 :root {
   /* ### Primary */
 

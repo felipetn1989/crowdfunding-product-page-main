@@ -11,15 +11,35 @@ mobileMenuIcon.addEventListener("click", () => {
     : "../images/icon-close-menu.svg";
 });
 
+
 let bookmark = false;
 
 bookmarkIcon.addEventListener("click", () => {
   bookmarkIcon.src = bookmark
     ? "../images/icon-bookmark.svg"
     : "../images/icon-bookmarked.svg";
+  bookmarkText.innerHTML = bookmark ? "Bookmark" : "Bookmarked";
+  bookmarkIcon.style.transform = bookmark
+    ? "translateX(0)"
+    : "translateX(-1rem)";
+  bookmarkText.style.color = bookmark ? "" : "#147b74";
   bookmark = !bookmark;
 });
 
-backProject.addEventListener("click", () => {
-    
-})
+backProject.addEventListener("click", openSelectionPage);
+
+closeSelectionIcon.addEventListener("click", openSelectionPage);
+
+const rewardButtons = document.querySelectorAll(".available_button");
+
+rewardButtons.forEach((button) => {
+  button.addEventListener("click", openSelectionPage);
+});
+
+function openSelectionPage() {
+  selectionPage.classList.toggle("hidden");
+  selectionPage.classList.toggle("grid");
+  overlay.classList.toggle("hidden");
+  overlay.classList.toggle("fixed");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
