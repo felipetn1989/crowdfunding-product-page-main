@@ -513,6 +513,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -523,6 +527,14 @@ video {
 
 .left-2\/4 {
   left: 50%;
+}
+
+.left-\[0rem\] {
+  left: 0rem;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .top-36 {
@@ -547,6 +559,18 @@ video {
 
 .z-10 {
   z-index: 10;
+}
+
+.z-\[11\] {
+  z-index: 11;
+}
+
+.z-\[5\] {
+  z-index: 5;
+}
+
+.z-\[12\] {
+  z-index: 12;
 }
 
 .mb-8 {
@@ -601,6 +625,10 @@ video {
   height: 1.5rem;
 }
 
+.h-\[100vh\] {
+  height: 100vh;
+}
+
 .h-\[18\.75rem\] {
   height: 18.75rem;
 }
@@ -623,6 +651,10 @@ video {
 
 .w-\[79\%\] {
   width: 79%;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .translate-x-\[-0\.5rem\] {
@@ -761,6 +793,10 @@ video {
   border-color: rgb(122 122 122 / var(--tw-border-opacity));
 }
 
+.bg-\[\#0000005d\] {
+  background-color: #0000005d;
+}
+
 .bg-\[\#3cb4ac\] {
   --tw-bg-opacity: 1;
   background-color: rgb(60 180 172 / var(--tw-bg-opacity));
@@ -888,10 +924,6 @@ video {
   padding-right: 1.5rem;
 }
 
-.pb-0 {
-  padding-bottom: 0px;
-}
-
 .text-center {
   text-align: center;
 }
@@ -1005,7 +1037,7 @@ video {
 :root {
   /* ### Primary */
   --Moderate-cyan: #3cb4ac;
-  --Dark-cyan: hsl(176, 72%, 28%);
+  --Dark-cyan: #147b74;
   /* ### Neutral */
   --Black: hsl(0, 0%, 0%);
   --Dark-gray: #7a7a7a;
@@ -1071,6 +1103,23 @@ header {
       "two two"
       "four four";
   }
+}
+
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
+}
+
+.hover\:cursor-default:hover {
+  cursor: default;
+}
+
+.hover\:bg-\[\]:hover {
+  background-color: ;
+}
+
+.hover\:bg-\[\#147b74\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 123 116 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 1024px) {
@@ -1162,8 +1211,16 @@ header {
     margin-top: 0.75rem;
   }
 
+  .lg\:mt-3\.5 {
+    margin-top: 0.875rem;
+  }
+
   .lg\:mt-6 {
     margin-top: 1.5rem;
+  }
+
+  .lg\:mt-\[-0\.1875rem\] {
+    margin-top: -0.1875rem;
   }
 
   .lg\:mt-\[-0\.25rem\] {
@@ -1186,54 +1243,6 @@ header {
     margin-top: -0.625rem;
   }
 
-  .lg\:mt-3\.5 {
-    margin-top: 0.875rem;
-  }
-
-  .lg\:mt-\[0rem\] {
-    margin-top: 0rem;
-  }
-
-  .lg\:mt-\[0\.25rem\] {
-    margin-top: 0.25rem;
-  }
-
-  .lg\:mt-\[-0rem\] {
-    margin-top: -0rem;
-  }
-
-  .lg\:mt-\[-0\.0625rem\] {
-    margin-top: -0.0625rem;
-  }
-
-  .lg\:mt-\[-0\.125rem\] {
-    margin-top: -0.125rem;
-  }
-
-  .lg\:mt-\[0\.0625rem\] {
-    margin-top: 0.0625rem;
-  }
-
-  .lg\:mt-\[-0\.1875rem\] {
-    margin-top: -0.1875rem;
-  }
-
-  .lg\:mt-4 {
-    margin-top: 1rem;
-  }
-
-  .lg\:mt-5 {
-    margin-top: 1.25rem;
-  }
-
-  .lg\:mt-\[1\.0625rem\] {
-    margin-top: 1.0625rem;
-  }
-
-  .lg\:mt-\[1\.0625re\] {
-    margin-top: 1.0625re;
-  }
-
   .lg\:mt-\[1\.125rem\] {
     margin-top: 1.125rem;
   }
@@ -1250,6 +1259,10 @@ header {
     display: none;
   }
 
+  .lg\:h-12 {
+    height: 3rem;
+  }
+
   .lg\:h-16 {
     height: 4rem;
   }
@@ -1260,18 +1273,6 @@ header {
 
   .lg\:h-\[9\.75rem\] {
     height: 9.75rem;
-  }
-
-  .lg\:h-10 {
-    height: 2.5rem;
-  }
-
-  .lg\:h-11 {
-    height: 2.75rem;
-  }
-
-  .lg\:h-12 {
-    height: 3rem;
   }
 
   .lg\:w-0 {
@@ -1340,21 +1341,6 @@ header {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
-  .lg\:translate-x-\[\] {
-    --tw-translate-x: ;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .lg\:translate-x-1\.5 {
-    --tw-translate-x: 0.375rem;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .lg\:translate-x-0 {
-    --tw-translate-x: 0px;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -1407,10 +1393,6 @@ header {
     gap: 2.125rem;
   }
 
-  .lg\:gap-1 {
-    gap: 0.25rem;
-  }
-
   .lg\:space-y-\[unset\] > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(unset * calc(1 - var(--tw-space-y-reverse)));
@@ -1452,6 +1434,11 @@ header {
     padding-right: 3rem;
   }
 
+  .lg\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .lg\:px-7 {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
@@ -1477,14 +1464,14 @@ header {
     padding-bottom: 3rem;
   }
 
+  .lg\:py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
   .lg\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
-  }
-
-  .lg\:py-\[1\.8125rem\] {
-    padding-top: 1.8125rem;
-    padding-bottom: 1.8125rem;
   }
 
   .lg\:py-\[3\.25rem\] {
@@ -1497,73 +1484,24 @@ header {
     padding-bottom: 3rem;
   }
 
-  .lg\:py-3 {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
+  .lg\:pb-0 {
+    padding-bottom: 0px;
   }
 
-  .lg\:py-3\.5 {
-    padding-top: 0.875rem;
-    padding-bottom: 0.875rem;
-  }
-
-  .lg\:py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
-  .lg\:py-2\.5 {
-    padding-top: 0.625rem;
-    padding-bottom: 0.625rem;
-  }
-
-  .lg\:py-1 {
-    padding-top: 0.25rem;
+  .lg\:pb-1 {
     padding-bottom: 0.25rem;
-  }
-
-  .lg\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .lg\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  .lg\:py-\[1\.75rem\] {
-    padding-top: 1.75rem;
-    padding-bottom: 1.75rem;
-  }
-
-  .lg\:py-\[1\.5rem\] {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .lg\:py-\[1\.4375rem\] {
-    padding-top: 1.4375rem;
-    padding-bottom: 1.4375rem;
-  }
-
-  .lg\:py-\[1\.375rem\] {
-    padding-top: 1.375rem;
-    padding-bottom: 1.375rem;
-  }
-
-  .lg\:py-\[1\.5625rem\] {
-    padding-top: 1.5625rem;
-    padding-bottom: 1.5625rem;
-  }
-
-  .lg\:py-7 {
-    padding-top: 1.75rem;
-    padding-bottom: 1.75rem;
   }
 
   .lg\:pb-11 {
     padding-bottom: 2.75rem;
+  }
+
+  .lg\:pb-4 {
+    padding-bottom: 1rem;
+  }
+
+  .lg\:pb-5 {
+    padding-bottom: 1.25rem;
   }
 
   .lg\:pb-\[1\.8125rem\] {
@@ -1578,64 +1516,20 @@ header {
     padding-right: 2.75rem;
   }
 
+  .lg\:pt-7 {
+    padding-top: 1.75rem;
+  }
+
   .lg\:pt-9 {
     padding-top: 2.25rem;
-  }
-
-  .lg\:pt-\[3\.5rem\] {
-    padding-top: 3.5rem;
-  }
-
-  .lg\:pb-0 {
-    padding-bottom: 0px;
-  }
-
-  .lg\:pt-\[1\.375rem\] {
-    padding-top: 1.375rem;
-  }
-
-  .lg\:pb-2 {
-    padding-bottom: 0.5rem;
-  }
-
-  .lg\:pb-3 {
-    padding-bottom: 0.75rem;
-  }
-
-  .lg\:pb-4 {
-    padding-bottom: 1rem;
-  }
-
-  .lg\:pt-\[1\.25rem\] {
-    padding-top: 1.25rem;
-  }
-
-  .lg\:pt-\[1\.3125rem\] {
-    padding-top: 1.3125rem;
-  }
-
-  .lg\:pt-\[1\.5rem\] {
-    padding-top: 1.5rem;
-  }
-
-  .lg\:pt-\[1\.5625rem\] {
-    padding-top: 1.5625rem;
   }
 
   .lg\:pt-\[1\.625rem\] {
     padding-top: 1.625rem;
   }
 
-  .lg\:pt-7 {
-    padding-top: 1.75rem;
-  }
-
-  .lg\:pb-5 {
-    padding-bottom: 1.25rem;
-  }
-
-  .lg\:pb-1 {
-    padding-bottom: 0.25rem;
+  .lg\:pt-\[3\.5rem\] {
+    padding-top: 3.5rem;
   }
 
   .lg\:text-2xl {

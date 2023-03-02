@@ -23,22 +23,25 @@
     >
       <img src="../images/logo.svg" alt="Crowdfund logo" />
       <img
-        class="lg:hidden"
+        id="mobileMenuIcon"
+        class="z-[12] lg:hidden hover:cursor-pointer"
         src="../images/icon-hamburger.svg"
         alt="Menu icon"
       />
       <nav
+        id="menu"
         class="absolute hidden top-[5.5rem] left-2/4 translate-x-[-50%] bg-white text-black font-bold py-6 z-10 w-[20.5rem] rounded-lg lg:block lg:bg-[unset] lg:top-[unset] lg:left-0 lg:relative lg:text-white lg:py-0 lg:translate-x-[6.5rem]"
       >
         <!-- change hidden to block -->
         <ul
           class="space-y-6 text-base tracking-tighter lg:flex lg:gap-8 lg:space-y-[unset] lg:text-xs lg:font-bold"
         >
-          <li class="px-6 pb-5 border-b lg:border-b-0 lg:px-0">About</li>
-          <li class="px-6 pb-6 border-b lg:border-b-0 lg:px-0">Discover</li>
-          <li class="px-6 lg:px-0">Get Started</li>
+          <li class="px-6 pb-5 border-b lg:border-b-0 lg:px-0 hover:cursor-pointer">About</li>
+          <li class="px-6 pb-6 border-b lg:border-b-0 lg:px-0 hover:cursor-pointer">Discover</li>
+          <li class="px-6 lg:px-0 hover:cursor-pointer">Get Started</li>
         </ul>
       </nav>
+      <div id="overlay" class="hidden h-[100vh] w-full bg-[#0000005d] top-0 left-[0rem] z-[5]"></div>
       <div
         class="hidden absolute top-36 left-2/4 translate-x-[-50%] place-items-center gap-6 py-8 px-7 bg-white justify-self-center z-10 w-[20.5rem] text-[0.8125rem] rounded-lg lg:top-[28.75rem] lg:w-[33.75rem] lg:py-12 lg:px-10 lg:gap-5"
       >
@@ -59,7 +62,7 @@
         </button>
       </div>
       <div
-        class="grid absolute top-[7.5rem] left-2/4 translate-x-[-50%] gap-7 py-8 px-6 bg-white justify-self-center z-10 w-[20.5rem] text-[0.8125rem] text-[#7a7a7a] rounded-lg lg:top-[11.5rem] lg:w-[45.5rem] lg:py-[3.25rem] lg:px-12 lg:gap-[2.125rem]"
+        class="hidden absolute top-[7.5rem] left-2/4 translate-x-[-50%] gap-7 py-8 px-6 bg-white justify-self-center z-10 w-[20.5rem] text-[0.8125rem] text-[#7a7a7a] rounded-lg lg:top-[11.5rem] lg:w-[45.5rem] lg:py-[3.25rem] lg:px-12 lg:gap-[2.125rem]"
       >
         <!-- Selection modal start -->
         <!-- Change hidden to grid -->
@@ -238,7 +241,7 @@
           class="flex justify-center items-center gap-3 mt-2 lg:justify-between lg:mt-2"
         >
           <button
-            class="bg-[#3cb4ac] text-white font-bold rounded-[2rem] py-[1.125rem] px-10 text-sm lg:mt-2 lg:px-9"
+            class="bg-[#3cb4ac] text-white font-bold rounded-[2rem] py-[1.125rem] px-10 text-sm lg:mt-2 lg:px-9 hover:cursor-pointer hover:bg-[#147b74]"
           >
             Back this project
           </button>
@@ -337,7 +340,7 @@
                   <span>left</span>
                 </div>
                 <button
-                  class="bg-[#3cb4ac] text-wh font-bold rounded-3xl text-white tracking-tighter py-3 px-8 mt-8 lg:mt-0"
+                  class="bg-[#3cb4ac] text-wh font-bold rounded-3xl text-white tracking-tighter py-3 px-8 mt-8 lg:mt-0 hover:cursor-pointer hover:bg-[#147b74]"
                 >
                   Select Reward
                 </button>
@@ -364,7 +367,7 @@
                   <span>left</span>
                 </div>
                 <button
-                  class="bg-[#3cb4ac] text-wh font-bold rounded-3xl text-white tracking-tighter py-3 px-8 mt-8 lg:mt-0"
+                  class="bg-[#3cb4ac] text-wh font-bold rounded-3xl text-white tracking-tighter py-3 px-8 mt-8 lg:mt-0 hover:cursor-pointer hover:bg-[#147b74]"
                 >
                   Select Reward
                 </button>
@@ -391,7 +394,7 @@
                   <span>left</span>
                 </div>
                 <button
-                  class="bg-[#7a7a7a] text-wh font-bold rounded-3xl text-white tracking-tighter py-3 px-9 mt-8 lg:mt-0"
+                  class="bg-[#7a7a7a] text-wh font-bold rounded-3xl text-white tracking-tighter py-3 px-9 mt-8 lg:mt-0 hover:cursor-default"
                 >
                   Out of Stock
                 </button>
@@ -402,4 +405,5 @@
       </div>
     </main>
   </body>
+  <script src="scripts/script.js"></script>
 </html>
