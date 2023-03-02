@@ -29,22 +29,23 @@ bookmarkIcon.addEventListener("click", (event) => {
   bookmark = !bookmark;
 });
 
-backProject.addEventListener("click", openSelectionPage);
+backProject.addEventListener("click", () => openSelectionPage(undefined));
 
-closeSelectionIcon.addEventListener("click", () => openSelectionPage(event,0));
+closeSelectionIcon.addEventListener("click", () => openSelectionPage(undefined));
 
 const rewardButtons = document.querySelectorAll(".available_button");
 const radios = document.getElementsByName("pledge")
 
 rewardButtons.forEach((button,index) => {
-  button.addEventListener("click",() => openSelectionPage(event,index));
+  button.addEventListener("click",() => openSelectionPage(index));
 });
 
-function openSelectionPage(event,index) {
-  if (event.target == backProject) {
-    radios[0].checked = true
+function openSelectionPage(index) {
+  console.log(index)
+  if (index !== undefined) {
+    radios[index+1].checked = true
   } else {
-    radios[index+1].check = true
+    radios[0].checked = true
   }
   selectionPage.classList.toggle("hidden");
   selectionPage.classList.toggle("grid");
