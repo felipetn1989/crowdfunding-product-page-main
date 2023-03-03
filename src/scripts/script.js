@@ -63,11 +63,33 @@ function openSelectionPage(index) {
     }
   } else {
     radios[0].checked = true;
+    hidePledges();
   }
 }
 
 radios.forEach((radio, index) => {
   radio.addEventListener("change", () => {
     console.log(index);
+    const enterPledges = document.querySelectorAll(".enter_pledge");
+    if (index !== 0) {
+      enterPledges[index - 1].classList.remove("hidden");
+      enterPledges[index - 1].classList.add("flex");
+      for (let j = 0; j < enterPledges.length; j++) {
+        if (j !== index - 1) {
+          enterPledges[j].classList.add("hidden");
+          enterPledges[j].classList.remove("flex");
+        }
+      }
+    } else {
+      hidePledges();
+    }
   });
 });
+
+function hidePledges() {
+  const enterPledges = document.querySelectorAll(".enter_pledge");
+  enterPledges.forEach((enterPledge) => {
+    enterPledge.classList.add("hidden");
+    enterPledge.classList.remove("flex");
+  });
+}
