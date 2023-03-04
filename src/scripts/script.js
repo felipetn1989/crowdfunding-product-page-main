@@ -48,19 +48,9 @@ function openSelectionPage(index) {
   overlay.classList.toggle("fixed");
   window.scrollTo({ top: 0, behavior: "smooth" });
 
-  const enterPledges = document.querySelectorAll(".enter_pledge");
-
   if (index !== undefined) {
     radios[index + 1].checked = true;
-    enterPledges[index].classList.toggle("hidden");
-    enterPledges[index].classList.toggle("flex");
-
-    for (let j = 0; j < enterPledges.length; j++) {
-      if (j !== index) {
-        enterPledges[j].classList.add("hidden");
-        enterPledges[j].classList.remove("flex");
-      }
-    }
+    displayPledge(index);
   } else {
     radios[0].checked = true;
     hidePledges();
@@ -72,14 +62,7 @@ radios.forEach((radio, index) => {
     console.log(index);
     const enterPledges = document.querySelectorAll(".enter_pledge");
     if (index !== 0) {
-      enterPledges[index - 1].classList.remove("hidden");
-      enterPledges[index - 1].classList.add("flex");
-      for (let j = 0; j < enterPledges.length; j++) {
-        if (j !== index - 1) {
-          enterPledges[j].classList.add("hidden");
-          enterPledges[j].classList.remove("flex");
-        }
-      }
+      displayPledge(index - 1);
     } else {
       hidePledges();
     }
@@ -92,4 +75,17 @@ function hidePledges() {
     enterPledge.classList.add("hidden");
     enterPledge.classList.remove("flex");
   });
+}
+
+function displayPledge(i) {
+  const enterPledges = document.querySelectorAll(".enter_pledge");
+  enterPledges[i].classList.toggle("hidden");
+  enterPledges[i].classList.toggle("flex");
+
+  for (let j = 0; j < enterPledges.length; j++) {
+    if (j !== i) {
+      enterPledges[j].classList.add("hidden");
+      enterPledges[j].classList.remove("flex");
+    }
+  }
 }
