@@ -231,7 +231,7 @@
                   <span class="pledge_value_fixed translate-x-[-0.625rem] text-black font-bold"
                     >75</span
                   >
-                  <input class="pledge_value_user hidden" type="number" min="76" max="199" size="5"/>
+                  <input class="pledge_value_user hidden" type="number" min="76" size="5"/>
                 </button>
                 <button
                   class="continue_button border border-[#3cb4ac] rounded-3xl bg-[#3cb4ac] text-white font-bold px-6 py-3 lg:px-5 lg:h-12 lg:py-2"
@@ -347,7 +347,7 @@
             class="h-0 w-20 border-t border-[#7a7a7a] place-self-center translate-y-[-0.5rem] lg:h-16 lg:w-0 lg:border-l lg:mt-[-0.5rem]"
           ></div>
           <div class="flex flex-col gap-5 lg:pr-11 lg:gap-3.5">
-            <span class="text-[1.75rem] font-bold text-black">5,007</span>
+            <span id="totalBackers" class="text-[1.75rem] font-bold text-black">5,007</span>
             <span>total backers</span>
           </div>
           <div
@@ -365,7 +365,7 @@
         <div
           class="w-[16.1875rem] h-3.5 bg-[#f4f4f4] place-self-center rounded-full lg:w-[97%] lg:mt-1"
         >
-          <div class="w-[89.9%] h-3.5 bg-[#3cb4ac] rounded-full"></div>
+          <div id="progressBar" class="w-[89.9%] h-3.5 bg-[#3cb4ac] rounded-full"></div>
         </div>
       </div>
 
@@ -412,7 +412,7 @@
                 class="lg:flex lg:justify-between lg:items-center lg:mt-[-0.625rem]"
               >
                 <div class="flex gap-2">
-                  <span class="text-[1.9375rem] font-bold text-black font-sans"
+                  <span class="pledge_left text-[1.9375rem] font-bold text-black font-sans"
                     >101</span
                   >
                   <span>left</span>
@@ -441,7 +441,7 @@
                 class="lg:flex lg:justify-between lg:mt-[-0.625rem] lg:items-center"
               >
                 <div class="flex gap-2">
-                  <span class="text-[1.9375rem] font-bold text-black">64</span>
+                  <span class="pledge_left text-[1.9375rem] font-bold text-black">64</span>
                   <span>left</span>
                 </div>
                 <button class="available_button">Select Reward</button>

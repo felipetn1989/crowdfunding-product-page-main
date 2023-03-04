@@ -1,5 +1,3 @@
-pledge_no_reward.checked = true;
-
 mobileMenuIcon.addEventListener("click", () => {
   const check = menu.classList.contains("hidden");
 
@@ -120,18 +118,48 @@ function defaultPledgeValues() {
 
 const continueButtons = document.querySelectorAll(".continue_button");
 
-continueButtons.forEach((button) => {
+continueButtons.forEach((button, index) => {
   button.addEventListener("click", (event) => {
+    progressBar.classList.remove("w-[89.9%]")
     event.preventDefault();
-    hidePledges()
+    hidePledges();
     selectionPage.classList.remove("grid");
     selectionPage.classList.add("hidden");
     overlay.classList.add("hidden");
     overlay.classList.remove("fixed");
-    let num = parseInt(backingValue.innerHTML.replace(",",""))
-    num += 25
-    numStr = num.toString().split("")
-    numStr.splice(numStr.length - 3,0,",")
-    backingValue.innerHTML = numStr.join("")
+    let num = parseInt(backingValue.innerHTML.replace(",", ""));
+    if (pledgeValueUser[index].classList.contains("block")) {
+      num += parseInt(pledgeValueUser[index].value);
+    } else if (index === 0) {
+      num += 25;
+      console.log(num);
+    } else {
+      num += 75;
+    }
+    numStr = num.toString().split("");
+    numStr.splice(numStr.length - 3, 0, ",");
+    backingValue.innerHTML = numStr.join("");
+    let backers = parseInt(totalBackers.innerHTML.replace(",", ""));
+    backers++;
+    backersStr = backers.toString().split("");
+    backersStr.splice(backersStr.length - 3, 0, ",");
+    totalBackers.innerHTML = backersStr.join("");
+
+    let percentage = ((num / 100000) * 100).toFixed(0);
+    progressBar.style.width = "0%";
+    if (percentage <= 100) {
+      progressBar.style.width = `${percentage}%`;
+    } else {
+      progressBar.style.width = "100%"
+    }
+
+    const pledgesLeft = document.querySelectorAll(".pledge_left")
+
+    let left = parseInt(pledgesLeft[index].innerHTML)
+    left--
+  
+    pledgesLeft[index].innerHTML = left
+
+    // to do: add continue button to pledge with no reward; add code to change the div to unavailable when left reaches 0
   });
 });
