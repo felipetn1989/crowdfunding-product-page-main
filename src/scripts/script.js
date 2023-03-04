@@ -123,9 +123,15 @@ const continueButtons = document.querySelectorAll(".continue_button");
 continueButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
+    hidePledges()
     selectionPage.classList.remove("grid");
     selectionPage.classList.add("hidden");
     overlay.classList.add("hidden");
     overlay.classList.remove("fixed");
+    let num = parseInt(backingValue.innerHTML.replace(",",""))
+    num += 25
+    numStr = num.toString().split("")
+    numStr.splice(numStr.length - 3,0,",")
+    backingValue.innerHTML = numStr.join("")
   });
 });
