@@ -47,6 +47,7 @@ function openSelectionPage(index) {
   overlay.classList.toggle("hidden");
   overlay.classList.toggle("fixed");
   window.scrollTo({ top: 0, behavior: "smooth" });
+  defaultPledgeValues();
 
   if (index !== undefined) {
     radios[index + 1].checked = true;
@@ -61,6 +62,7 @@ radios.forEach((radio, index) => {
   radio.addEventListener("change", () => {
     console.log(index);
     const enterPledges = document.querySelectorAll(".enter_pledge");
+    defaultPledgeValues();
     if (index !== 0) {
       displayPledge(index - 1);
     } else {
@@ -71,7 +73,7 @@ radios.forEach((radio, index) => {
 
 function hidePledges() {
   const enterPledges = document.querySelectorAll(".enter_pledge");
-  enterPledges.forEach((enterPledge) => {
+  enterPledges.forEach((enterPledge, index) => {
     enterPledge.classList.add("hidden");
     enterPledge.classList.remove("flex");
   });
@@ -89,3 +91,41 @@ function displayPledge(i) {
     }
   }
 }
+
+const pledgeValueButtons = document.querySelectorAll(".pledge_value_button");
+const pledgeValueFixed = document.querySelectorAll(".pledge_value_fixed");
+const pledgeValueUser = document.querySelectorAll(".pledge_value_user");
+const backingPage = document.querySelector(".backing_page");
+
+pledgeValueButtons.forEach((button, index) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    pledgeValueFixed[index].classList.add("hidden");
+    pledgeValueUser[index].classList.remove("hidden");
+    pledgeValueUser[index].classList.add("block");
+  });
+});
+
+function defaultPledgeValues() {
+  pledgeValueFixed.forEach((element) => {
+    element.classList.remove("hidden");
+  });
+
+  pledgeValueUser.forEach((element) => {
+    element.value = "";
+    element.classList.add("hidden");
+    element.classList.remove("block");
+  });
+}
+
+const continueButtons = document.querySelectorAll(".continue_button");
+
+continueButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    selectionPage.classList.remove("grid");
+    selectionPage.classList.add("hidden");
+    overlay.classList.add("hidden");
+    overlay.classList.remove("fixed");
+  });
+});
