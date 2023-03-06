@@ -149,12 +149,16 @@ continueButtons.forEach((button, index) => {
     }
 
     const pledgesLeft = document.querySelectorAll(".pledge_left");
-    const pledgesLeftSelectionPage = document.querySelectorAll(".pledge_left_selection_page")
+    const pledgesLeftSelectionPage = document.querySelectorAll(
+      ".pledge_left_selection_page"
+    );
     const selectRewards = document.querySelectorAll(".select_reward");
 
     if (index !== 0) {
       let left = parseInt(pledgesLeft[index - 1].innerHTML);
-      let leftSelection = parseInt(pledgesLeftSelectionPage[index - 1].innerHTML);
+      let leftSelection = parseInt(
+        pledgesLeftSelectionPage[index - 1].innerHTML
+      );
       left--;
       leftSelection--;
       pledgesLeft[index - 1].innerHTML = left;
@@ -162,11 +166,8 @@ continueButtons.forEach((button, index) => {
       if (left === 0) {
         selectRewards[index - 1].classList.add("disabled");
         rewardButtons[index - 1].innerHTML = "Out of Stock";
-        rewardButtons[index - 1].classList.remove("available_button")
-        rewardButtons[index - 1].classList.add("unavailable_button")
-        rewardButtons[index - 1].removeEventListener("click", () =>
-          openSelectionPage(index + 1)
-        );
+        rewardButtons[index - 1].classList.remove("available_button");
+        rewardButtons[index - 1].classList.add("unavailable_button");
       }
     }
 
