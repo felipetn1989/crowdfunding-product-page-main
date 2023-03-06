@@ -1173,6 +1173,10 @@ header {
   cursor: pointer;
 }
 
+.hover\:cursor-default:hover {
+  cursor: default;
+}
+
 .hover\:bg-\[\#147b74\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(20 123 116 / var(--tw-bg-opacity));

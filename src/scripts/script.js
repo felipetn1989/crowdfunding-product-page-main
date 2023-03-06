@@ -124,7 +124,7 @@ continueButtons.forEach((button, index) => {
     overlay.classList.add("hidden");
     overlay.classList.remove("fixed");
     let num = parseInt(backingValue.innerHTML.replace(",", ""));
-    if (pledgeValueUser[index-1].classList.contains("block")) {
+    if (pledgeValueUser[index - 1].classList.contains("block")) {
       num += parseInt(pledgeValueUser[index].value);
     } else if (index === 1) {
       num += 25;
@@ -149,16 +149,16 @@ continueButtons.forEach((button, index) => {
     }
 
     const pledgesLeft = document.querySelectorAll(".pledge_left");
-    const selectRewards = document.querySelectorAll(".select_reward")
+    const selectRewards = document.querySelectorAll(".select_reward");
 
     if (index !== 0) {
       let left = parseInt(pledgesLeft[index - 1].innerHTML);
       left--;
       pledgesLeft[index - 1].innerHTML = left;
       if (left === 0) {
-        selectRewards[index-1].classList.add("disabled")
-        rewardButtons[index-1].removeEventListener("click")
-        rewardButtons[index-1].classList.remove("hover:cursor-pointer")
+        selectRewards[index - 1].classList.add("disabled");
+        rewardButtons[index - 1].innerHTML = "Out of Stock";
+        rewardButtons[index - 1].classList.add("hover:cursor-default");
       }
     }
 
