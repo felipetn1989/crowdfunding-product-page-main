@@ -26,20 +26,29 @@ bookmarkIcon.addEventListener("click", (event) => {
   bookmark = !bookmark;
 });
 
-backProject.addEventListener("click", () => openSelectionPage(0));
-
 closeSelectionIcon.addEventListener("click", () =>
   openSelectionPage(undefined)
 );
 
-const rewardButtons = document.querySelectorAll(".reward_button");
+const backingButtons = document.querySelectorAll(".backing_button");
 const radios = document.getElementsByName("pledge");
 
-rewardButtons.forEach((button,index) => button.addEventListener("click",clicked))
-
-function clicked() {
-  
+function addEvents() {
+  backingButtons.forEach((button, index) => {
+    if (button.classList.contains("available_button") && index !== 0) {
+      button.innerHTML = "Select Reward";
+    } else if (button.classList.contains("unavailable_button")) {
+      button.innerHTML = "Out of Stock";
+    }
+    button.addEventListener("click", () => {
+      if (button.classList.contains("available_button")) {
+        openSelectionPage(index);
+      }
+    });
+  });
 }
+
+addEvents();
 
 function openSelectionPage(index) {
   selectionPage.classList.toggle("hidden");
@@ -69,7 +78,7 @@ radios.forEach((radio, index) => {
 
 function hidePledges() {
   const enterPledges = document.querySelectorAll(".enter_pledge");
-  enterPledges.forEach((enterPledge, index) => {
+  enterPledges.forEach((enterPledge) => {
     enterPledge.classList.add("hidden");
     enterPledge.classList.remove("flex");
   });
@@ -168,14 +177,12 @@ continueButtons.forEach((button, index) => {
       console.log(left);
       if (left == 0) {
         selectRewards[index - 1].classList.add("disabled");
-        rewardButtons[index - 1].innerHTML = "Out of Stock";
-        rewardButtons[index - 1].classList.remove("available_button");
-        rewardButtons[index - 1].classList.add("unavailable_button");
-        rewardButtons[index - 1].removeEventListener("click", () => {
-          openSelectionPage(i + 1);
-        });
+        backingButtons[index - 1].classList.remove("available_button");
+        backingButtons[index - 1].classList.add("unavailable_button");
+        console.log(backingButtons[index-1].classList)
       }
     }
+    addEvents();
 
     // to do: add code to change the div to unavailable when left reaches 0
   });
