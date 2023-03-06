@@ -69,7 +69,6 @@ function openSelectionPage(index) {
 
 radios.forEach((radio, index) => {
   radio.addEventListener("change", () => {
-    console.log(index);
     const enterPledges = document.querySelectorAll(".enter_pledge");
     defaultPledgeValues();
     displayPledge(index);
@@ -84,15 +83,19 @@ function hidePledges() {
   });
 }
 
+const rewardBoxes = document.querySelectorAll(".reward_box")
+
 function displayPledge(i) {
   const enterPledges = document.querySelectorAll(".enter_pledge");
   enterPledges[i].classList.toggle("hidden");
   enterPledges[i].classList.toggle("flex");
+  rewardBoxes[i].classList.add("border-[#3cb4ac]");
 
   for (let j = 0; j < enterPledges.length; j++) {
     if (j !== i) {
       enterPledges[j].classList.add("hidden");
       enterPledges[j].classList.remove("flex");
+      rewardBoxes[j].classList.remove("border-[#3cb4ac]");
     }
   }
 }

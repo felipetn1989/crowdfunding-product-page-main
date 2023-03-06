@@ -14,7 +14,7 @@
   }
 
   .disabled {
-    @apply grayscale opacity-50
+    @apply grayscale opacity-50;
   }
 }
 
