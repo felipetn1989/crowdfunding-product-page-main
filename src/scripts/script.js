@@ -35,10 +35,10 @@ closeSelectionIcon.addEventListener("click", () =>
 const rewardButtons = document.querySelectorAll(".reward_button");
 const radios = document.getElementsByName("pledge");
 
-for (let i = 0; i < rewardButtons.length; i++) {
-  rewardButtons[i].addEventListener("click", () => {
-    openSelectionPage(i + 1);
-  });
+rewardButtons.forEach((button,index) => button.addEventListener("click",clicked))
+
+function clicked() {
+  
 }
 
 function openSelectionPage(index) {
