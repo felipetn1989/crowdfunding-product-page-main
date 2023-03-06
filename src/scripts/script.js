@@ -127,6 +127,7 @@ const continueButtons = document.querySelectorAll(".continue_button");
 
 continueButtons.forEach((button, index) => {
   button.addEventListener("click", (event) => {
+    addEvents();
     progressBar.classList.remove("w-[89.9%]");
     event.preventDefault();
     hidePledges();
@@ -177,9 +178,9 @@ continueButtons.forEach((button, index) => {
       console.log(left);
       if (left == 0) {
         selectRewards[index - 1].classList.add("disabled");
-        backingButtons[index - 1].classList.remove("available_button");
-        backingButtons[index - 1].classList.add("unavailable_button");
-        console.log(backingButtons[index-1].classList)
+        backingButtons[index].classList.remove("available_button");
+        backingButtons[index].classList.add("unavailable_button")
+        
       }
     }
     addEvents();
