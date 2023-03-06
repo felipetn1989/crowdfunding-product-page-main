@@ -26,7 +26,7 @@ bookmarkIcon.addEventListener("click", (event) => {
   bookmark = !bookmark;
 });
 
-backProject.addEventListener("click", () => openSelectionPage(undefined));
+backProject.addEventListener("click", () => openSelectionPage(0));
 
 closeSelectionIcon.addEventListener("click", () =>
   openSelectionPage(undefined)
@@ -36,7 +36,7 @@ const rewardButtons = document.querySelectorAll(".available_button");
 const radios = document.getElementsByName("pledge");
 
 rewardButtons.forEach((button, index) => {
-  button.addEventListener("click", () => openSelectionPage(index));
+  button.addEventListener("click", () => openSelectionPage(index + 1));
 });
 
 function openSelectionPage(index) {
@@ -48,7 +48,7 @@ function openSelectionPage(index) {
   defaultPledgeValues();
 
   if (index !== undefined) {
-    radios[index + 1].checked = true;
+    radios[index].checked = true;
     displayPledge(index);
   } else {
     radios[0].checked = true;
@@ -61,11 +61,7 @@ radios.forEach((radio, index) => {
     console.log(index);
     const enterPledges = document.querySelectorAll(".enter_pledge");
     defaultPledgeValues();
-    if (index !== 0) {
-      displayPledge(index - 1);
-    } else {
-      hidePledges();
-    }
+    displayPledge(index);
   });
 });
 
@@ -120,7 +116,7 @@ const continueButtons = document.querySelectorAll(".continue_button");
 
 continueButtons.forEach((button, index) => {
   button.addEventListener("click", (event) => {
-    progressBar.classList.remove("w-[89.9%]")
+    progressBar.classList.remove("w-[89.9%]");
     event.preventDefault();
     hidePledges();
     selectionPage.classList.remove("grid");
@@ -128,12 +124,11 @@ continueButtons.forEach((button, index) => {
     overlay.classList.add("hidden");
     overlay.classList.remove("fixed");
     let num = parseInt(backingValue.innerHTML.replace(",", ""));
-    if (pledgeValueUser[index].classList.contains("block")) {
+    if (pledgeValueUser[index-1].classList.contains("block")) {
       num += parseInt(pledgeValueUser[index].value);
-    } else if (index === 0) {
+    } else if (index === 1) {
       num += 25;
-      console.log(num);
-    } else {
+    } else if (index === 2) {
       num += 75;
     }
     numStr = num.toString().split("");
@@ -150,16 +145,23 @@ continueButtons.forEach((button, index) => {
     if (percentage <= 100) {
       progressBar.style.width = `${percentage}%`;
     } else {
-      progressBar.style.width = "100%"
+      progressBar.style.width = "100%";
     }
 
-    const pledgesLeft = document.querySelectorAll(".pledge_left")
+    const pledgesLeft = document.querySelectorAll(".pledge_left");
+    const selectRewards = document.querySelectorAll(".select_reward")
 
-    let left = parseInt(pledgesLeft[index].innerHTML)
-    left--
-  
-    pledgesLeft[index].innerHTML = left
+    if (index !== 0) {
+      let left = parseInt(pledgesLeft[index - 1].innerHTML);
+      left--;
+      pledgesLeft[index - 1].innerHTML = left;
+      if (left === 0) {
+        selectRewards[index-1].classList.add("disabled")
+        rewardButtons[index-1].removeEventListener("click")
+        rewardButtons[index-1].classList.remove("hover:cursor-pointer")
+      }
+    }
 
-    // to do: add continue button to pledge with no reward; add code to change the div to unavailable when left reaches 0
+    // to do: add code to change the div to unavailable when left reaches 0
   });
 });
