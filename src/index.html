@@ -76,7 +76,8 @@
           completed.
         </p>
         <button
-          class="bg-[#3cb4ac] text-white font-bold rounded-[2rem] text-xs px-8 py-4 mt-2 lg:mt-3"
+          id="gotItButton"
+          class="bg-[#3cb4ac] text-white font-bold rounded-[2rem] text-xs px-8 py-4 mt-2 mb-6 lg:mt-3"
         >
           Got it!
         </button>
@@ -134,7 +135,7 @@
             </p>
                         <!-- Selected pledge start -->
             <div
-              class="enter_pledge hidden gap-4 items-center border-t py-6 lg:justify-end lg:pb-0 lg:mt-3.5"
+              class="enter_pledge hidden gap-4 items-center border-t pt-6 mb-[-0.4375rem] lg:justify-end lg:pb-0 lg:mt-3.5"
             >
               <div class="flex">
                 <button
@@ -178,7 +179,7 @@
             <!-- Selected pledge start -->
             <!-- change hidden to flex -->
             <div
-              class="enter_pledge grid_bloc1 hidden flex-col gap-4 items-center border-t py-6 lg:flex-row lg:justify-between lg:pb-1 lg:mt-[1.125rem]"
+              class="enter_pledge grid_bloc1 hidden flex-col gap-4 items-center border-t pt-6 mb-[-0.4375rem] lg:flex-row lg:justify-between lg:pb-1 lg:mt-[1.125rem]"
             >
               <h4 class="lg:text-sm">Enter your pledge</h4>
               <div class="flex justify-center gap-4">
@@ -233,7 +234,7 @@
             </div>
             <!-- Selected pledge start -->
             <div
-              class="enter_pledge grid_bloc2 hidden flex-col gap-4 items-center border-t py-6 lg:flex-row lg:justify-between lg:pb-0 lg:mt-3.5"
+              class="enter_pledge grid_bloc2 hidden flex-col gap-4 items-center border-t pt-6 mb-[-0.4375rem] lg:flex-row lg:justify-between lg:pb-0 lg:mt-3.5"
             >
               <h4 class="lg:text-sm">Enter your pledge</h4>
               <div class="flex justify-center gap-4">
@@ -264,7 +265,7 @@
                 type="radio"
                 name="pledge"
                 id="pledge_200"
-                disabled
+                disabled="disabled"
               />
               <label
                 class="flex flex-col gap-1 text-[0.6875rem] lg:flex-row lg:items-center lg:gap-3"
@@ -425,11 +426,11 @@
               >
                 <div class="flex gap-2">
                   <span class="pledge_left text-[1.9375rem] font-bold text-black font-sans"
-                    >1</span
+                    >101</span
                   >
                   <span>left</span>
                 </div>
-                <button class="backing_button available_button">Select Reward</button>
+                <button class="backing_button available_button mt-8">Select Reward</button>
               </div>
             </div>
             <div class="select_reward border rounded-md p-5 lg:px-7 lg:py-8">
@@ -456,7 +457,7 @@
                   <span class="pledge_left text-[1.9375rem] font-bold text-black">64</span>
                   <span>left</span>
                 </div>
-                <button class="backing_button available_button">Select Reward</button>
+                <button class="backing_button available_button mt-8">Select Reward</button>
               </div>
             </div>
             <div
@@ -485,7 +486,7 @@
                   <span class="text-[1.9375rem] font-bold text-black">0</span>
                   <span>left</span>
                 </div>
-                <button class="backing_button unavailable_button">Out of Stock</button>
+                <button class="backing_button unavailable_button mt-8">Out of Stock</button>
               </div>
             </div>
           </div>

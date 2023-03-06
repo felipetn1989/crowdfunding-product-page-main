@@ -133,11 +133,9 @@ continueButtons.forEach((button, index) => {
     hidePledges();
     selectionPage.classList.remove("grid");
     selectionPage.classList.add("hidden");
-    overlay.classList.add("hidden");
-    overlay.classList.remove("fixed");
     let num = parseInt(backingValue.innerHTML.replace(",", ""));
-    if (pledgeValueUser[index - 1].classList.contains("block")) {
-      num += parseInt(pledgeValueUser[index].value);
+    if (index !== 0 && pledgeValueUser[index - 1].classList.contains("block")) {
+      num += parseInt(pledgeValueUser[index - 1].value);
     } else if (index === 1) {
       num += 25;
     } else if (index === 2) {
@@ -168,23 +166,28 @@ continueButtons.forEach((button, index) => {
 
     if (index !== 0) {
       let left = parseInt(pledgesLeft[index - 1].innerHTML);
-      let leftSelection = parseInt(
-        pledgesLeftSelectionPage[index - 1].innerHTML
-      );
       left--;
-      leftSelection--;
       pledgesLeft[index - 1].innerHTML = left;
       pledgesLeftSelectionPage[index - 1].innerHTML = left;
       console.log(left);
       if (left == 0) {
         selectRewards[index - 1].classList.add("disabled");
         backingButtons[index].classList.remove("available_button");
-        backingButtons[index].classList.add("unavailable_button")
-        
+        backingButtons[index].classList.add("unavailable_button");
+        const pledgeBlocs = document.querySelectorAll(".pledge_bloc");
+        pledgeBlocs[index - 1].classList.add("disabled");
+        radios[index].setAttribute("disabled", "disabled");
       }
     }
     addEvents();
-
-    // to do: add code to change the div to unavailable when left reaches 0
+    thankYouPage.classList.remove("hidden");
+    thankYouPage.classList.add("grid");
   });
+});
+
+gotItButton.addEventListener("click", () => {
+  thankYouPage.classList.remove("grid");
+  thankYouPage.classList.add("hidden");
+  overlay.classList.toggle("hidden");
+  overlay.classList.toggle("fixed");
 });
