@@ -35,9 +35,11 @@ closeSelectionIcon.addEventListener("click", () =>
 const rewardButtons = document.querySelectorAll(".reward_button");
 const radios = document.getElementsByName("pledge");
 
-rewardButtons.forEach((button, index) => {
-  button.addEventListener("click", () => openSelectionPage(index + 1));
-});
+for (let i = 0; i < rewardButtons.length; i++) {
+  rewardButtons[i].addEventListener("click", () => {
+    openSelectionPage(i + 1);
+  });
+}
 
 function openSelectionPage(index) {
   selectionPage.classList.toggle("hidden");
@@ -163,11 +165,15 @@ continueButtons.forEach((button, index) => {
       leftSelection--;
       pledgesLeft[index - 1].innerHTML = left;
       pledgesLeftSelectionPage[index - 1].innerHTML = left;
-      if (left === 0) {
+      console.log(left);
+      if (left == 0) {
         selectRewards[index - 1].classList.add("disabled");
         rewardButtons[index - 1].innerHTML = "Out of Stock";
         rewardButtons[index - 1].classList.remove("available_button");
         rewardButtons[index - 1].classList.add("unavailable_button");
+        rewardButtons[index - 1].removeEventListener("click", () => {
+          openSelectionPage(i + 1);
+        });
       }
     }
 
