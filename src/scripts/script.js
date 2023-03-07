@@ -138,7 +138,7 @@ const backingPage = document.querySelector(".backing_page");
 pledgeValueButtons.forEach((button, index) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
-    pledgeValueFixed[index].classList.add("hidden");
+    pledgeValueButtons[index].classList.add("hidden");
     pledgeValueUser[index].classList.remove("hidden");
     pledgeValueUser[index].classList.add("block");
   });
@@ -146,7 +146,7 @@ pledgeValueButtons.forEach((button, index) => {
 
 function defaultPledgeValues() {
   //this function displays the default price and hides the user input price whenever it's invoked
-  pledgeValueFixed.forEach((element) => {
+  pledgeValueButtons.forEach((element) => {
     element.classList.remove("hidden");
   });
 
